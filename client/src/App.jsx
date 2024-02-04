@@ -5,8 +5,9 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import LoginSignup from "./pages/LoginSignUp";
-import AboutUs from "./pages/AboutUs";
 import Footer from "./components/Footer";
+import ProductInfo from "./components/ProductInfo";
+
 const App = () => {
   return (
     <div>
@@ -14,12 +15,15 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />}>
-            <Route path=":productId" element={<Products />} />
-          </Route>
+          <Route path="/vitamins" element={<Products category="vitamin" />} />
+          <Route path="/protein" element={<Products category="protein" />} />
+          <Route path="/calcium" element={<Products category="calcium" />} />
+          <Route path="/omega" element={<Products category="omega" />} />
+          {/* Remove the nested Routes for ProductInfo */}
+          <Route path="/products" element={<ProductInfo />} />
+          <Route path="/products/:productID" element={<ProductInfo />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignup />} />
-          <Route path="/aboutus" element={<AboutUs />} />
         </Routes>
         <Footer />
       </BrowserRouter>

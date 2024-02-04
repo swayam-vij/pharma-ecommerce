@@ -16,7 +16,7 @@ const LoginSignUp = () => {
       >
         <header className="form-block__header mb-6">
           <h1 className="text-2xl font-semibold">
-            {mode === "login" ? "Welcome back!" : "Sign up"}
+            {mode === "login" ? "Welcome back!" : "Create a new Account."}
           </h1>
         </header>
         <AuthForm

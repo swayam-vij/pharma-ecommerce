@@ -9,7 +9,7 @@ const CardSection = () => {
   ];
 
   return (
-    <div className="h-screen/3 bg-gradient-to-b from-blue-600 to-white flex items-center justify-center">
+    <div className="h-screen/3 bg-gradient-to-b from-white to-blue-600 flex items-center justify-center">
       <div className="container mx-auto flex justify-between">
         {cardsData.map((card, index) => (
           <div key={index} className="w-1/5 p-4">

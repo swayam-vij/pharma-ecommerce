@@ -1,5 +1,3 @@
-import Input from "./Input";
-
 import React from "react";
 
 const AuthForm = ({ mode, onSubmit, toggleMode }) => {

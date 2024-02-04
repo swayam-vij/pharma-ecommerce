@@ -2,12 +2,14 @@ import React, { useContext } from "react";
 import ItemCard from "../components/ItemCard";
 import { ShopContext } from "../context/shopContext";
 
-const Products = (props) => {
+const AllProducts = (props) => {
   const { allProducts } = useContext(ShopContext);
+
   return (
-    <div className="flex flex-wrap justify-center min-h-screen">
-      {allProducts.map((item, i) =>
-        props.category === item.category ? (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-600 to-white">
+      <h2 className="text-3xl font-bold mb-4">All Products</h2>
+      <div className="flex flex-wrap justify-center">
+        {allProducts.map((item, i) => (
           <ItemCard
             key={i}
             name={item.name}
@@ -15,10 +17,10 @@ const Products = (props) => {
             price={item.mrp}
             specialPrice={item.discounted_price}
           />
-        ) : null
-      )}
+        ))}
+      </div>
     </div>
   );
 };
 
-export default Products;
+export default AllProducts;

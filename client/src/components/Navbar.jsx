@@ -10,9 +10,10 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { name: "Dawaiyan", path: "/products" },
-    { name: "Gand Mari", path: "/gand-mari" },
-    { name: "Jankari", path: "/aboutus" },
+    { name: "Vitamins", path: "/vitamins" },
+    { name: "Protein Powder", path: "/protein" },
+    { name: "Calcium", path: "/calcium" },
+    { name: "Omega 3", path: "/omega" },
   ];
 
   return (
@@ -21,11 +22,11 @@ const Navbar = () => {
       <Link to="/">
         <div className="flex justify-center items-center gap-2">
           <img src="https://dummyimage.com/125x70/000/fff" alt="" />
-          <p className="text-2xl font-semibold">Baniye Ki Dukan</p>
+          <p className="text-2xl font-semibold">pahrma</p>
         </div>
       </Link>
       {/* nav list */}
-      <ul className="flex items-center justify-center font-semibold space-x-4">
+      <ul className="flex items-center justify-center font-semibold space-x-6">
         {navItems.map((item, index) => (
           <li
             key={index}
