@@ -12,6 +12,7 @@ const AllProducts = (props) => {
         {allProducts.map((item, i) => (
           <ItemCard
             key={i}
+            id={item.id}
             name={item.name}
             image={item.main_img}
             price={item.mrp}
