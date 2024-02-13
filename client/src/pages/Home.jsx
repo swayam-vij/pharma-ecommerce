@@ -3,14 +3,18 @@ import Hero from "../components/Hero";
 import Info from "../components/Info";
 import CardSection from "../components/CardSection";
 import AllProducts from "./AllProducts";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
     <div>
+      <Navbar />
       <Hero />
       <Info />
       <AllProducts />
       <CardSection />
+      <Footer />
     </div>
   );
 };

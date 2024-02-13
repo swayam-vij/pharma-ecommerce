@@ -12,7 +12,6 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/vitamins" element={<Products category="vitamin" />} />
@@ -25,7 +24,6 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignup />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </div>
   );

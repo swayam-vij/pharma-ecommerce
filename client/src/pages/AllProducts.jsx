@@ -14,9 +14,9 @@ const AllProducts = (props) => {
             key={i}
             id={item.id}
             name={item.name}
-            image={item.main_img}
-            price={item.mrp}
-            specialPrice={item.discounted_price}
+            thumbnail={item.thumbnail}
+            mrp={item.mrp}
+            discount={item.discount}
           />
         ))}
       </div>

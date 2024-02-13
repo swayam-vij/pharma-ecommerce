@@ -5,32 +5,32 @@ const ItemCard = (props) => {
   return (
     <div className="flex items-center justify-center w-80">
       <div className="w-full p-4">
-        <div className="flex flex-col justify-center p-10 bg-white rounded-lg shadow-2xl card">
-          <div>
-            <p className="text-xl font-bold text-gray-900 uppercase">
-              {props.name}
-            </p>
-          </div>
+        <div className="flex flex-col justify-center p-10 bg-stone-200 rounded-lg shadow-2xl card">
           <div>
             <Link to={`/products/${props.id}`}>
               <img
-                src={props.image}
+                src={props.thumbnail}
                 className="object-cover object-center w-full py-5"
               />
             </Link>
+          </div>
+          <div>
+            <p className="text-xl font-semibold text-gray-900 uppercase">
+              {props.name}
+            </p>
           </div>
           <div className="grid gap-10 prod-info">
             {/* Price section */}
             <div className="flex items-center text-gray-900 md:flex-row">
               {/* New price */}
-              {props.specialPrice && (
+              {props.discount && (
                 <div className="text-lg font-semibold">
-                  <p>{props.specialPrice}</p>
+                  <p>{props.discount}</p>
                 </div>
               )}
               {/* Old price */}
               <div className="text-lg font-semibold line-through text-gray-500 ml-4">
-                {props.price}
+                {props.mrp}
               </div>
             </div>
 
