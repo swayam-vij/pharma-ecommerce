@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ShopContext } from "../context/shopContext";
 
 const ItemCard = (props) => {
+  const { addToCart } = useContext(ShopContext);
   return (
     <div className="flex items-center justify-center w-80">
       <div className="w-full p-4">
@@ -9,6 +11,7 @@ const ItemCard = (props) => {
           <div>
             <Link to={`/products/${props.id}`}>
               <img
+                onClick={window.scrollTo(0, 0)}
                 src={props.thumbnail}
                 className="object-cover object-center w-full py-5"
               />
@@ -36,7 +39,12 @@ const ItemCard = (props) => {
 
             {/* Add to cart button */}
             <div className="flex flex-col items-center justify-between md:flex-row">
-              <button className="px-6 py-2 uppercase transition duration-200 ease-in border-2 border-gray-900 rounded-full hover:bg-blue-600 hover:text-white focus:outline-none">
+              <button
+                onClick={() => {
+                  addToCart(props.id);
+                }}
+                className="px-6 py-2 uppercase transition duration-200 ease-in border-2 border-gray-900 rounded-full hover:bg-blue-600 hover:text-white focus:outline-none"
+              >
                 Add to cart
               </button>
             </div>

@@ -5,6 +5,7 @@ import CardSection from "../components/CardSection";
 import AllProducts from "./AllProducts";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import FAQ from "../components/FAQ";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Hero />
       <Info />
       <AllProducts />
+      <FAQ />
       <CardSection />
       <Footer />
     </div>

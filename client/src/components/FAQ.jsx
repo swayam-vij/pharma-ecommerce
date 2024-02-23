@@ -1,5 +1,5 @@
 import React from "react";
-
+import faqData from "../assets/faqData";
 const FAQ = () => {
   return (
     <div>

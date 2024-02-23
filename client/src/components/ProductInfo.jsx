@@ -6,13 +6,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
-import { CiHeart } from "react-icons/ci";
 import { FaShoppingCart } from "react-icons/fa";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import RelatedProduct from "./RelatedProduct";
 
 const ProductInfo = () => {
-  const { allProducts } = useContext(ShopContext);
+  const { allProducts, addToCart } = useContext(ShopContext);
   const { productID } = useParams();
 
   const product = allProducts.find((e) => e.id === Number(productID));
@@ -77,17 +77,19 @@ const ProductInfo = () => {
           </p>
           {/* Add to Cart button */}
           <div className="mt-6 flex items-center gap-6">
-            <button className="flex h-12 w-1/3 items-center justify-center bg-violet-900 text-white duration-100 hover:bg-blue-800">
+            <button
+              onClick={() => {
+                addToCart(product.id);
+              }}
+              className="flex h-12 w-1/3 items-center justify-center bg-violet-900 text-white duration-100 hover:bg-blue-800"
+            >
               <FaShoppingCart />
               Add to Cart
-            </button>
-            <button className="flex h-12 w-1/3 items-center justify-center bg-amber-400 duration-100 hover:bg-yellow-300">
-              <CiHeart />
-              Add to Wishlist
             </button>
           </div>
         </div>
       </section>
+      <RelatedProduct />
       <Footer />
     </div>
   );

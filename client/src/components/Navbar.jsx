@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import react, { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import { useContext } from "react";
+import { ShopContext } from "../context/shopContext";
 
 const Navbar = () => {
   const [selectedItem, setSelectedItem] = useState(null);
+  const { getTotalCartItems } = useContext(ShopContext);
 
   const handleItemClick = (index) => {
     setSelectedItem(index === selectedItem ? null : index);
@@ -50,7 +53,7 @@ const Navbar = () => {
           <FaShoppingCart size={24} />
         </Link>
         <div className="flex bottom-0 right-0 bg-red-500 text-white p-1 rounded-full">
-          0
+          {getTotalCartItems()}
         </div>
       </div>
     </div>
