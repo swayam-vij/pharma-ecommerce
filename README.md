@@ -1,9 +1,8 @@
-- [ ] Mercury
-- [x] Venus
-- [x] Earth (Orbit/Moon)
-- [x] Mars
-- [ ] Jupiter
-- [ ] Saturn
-- [ ] Uranus
-- [ ] Neptune
-- [ ] Comet Haley
+# ecomm pharma
+
+## Options Checklist
+
+- [ ] complete admin panel
+- [ ] make site responsive
+- [ ] add stripe
+- [ ] optimize checkout page
