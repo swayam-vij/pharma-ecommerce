@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
 import { FaShoppingCart } from "react-icons/fa";
 import Navbar from "./Navbar";
@@ -50,16 +49,6 @@ const ProductInfo = () => {
         {/* Description */}
         <div className="mx-auto px-5 lg:px-10">
           <h2 className="pt-3 text-2xl font-bold lg:pt-0">{product.name}</h2>
-          {/* Rating */}
-          <div className="mt-1 flex items-center">
-            <Rater
-              style={{ fontSize: "20px" }}
-              total={5}
-              interactive={false}
-              rating={3.5} // Placeholder rating
-            />
-            <p className="ml-3 text-sm text-gray-400">(150 Reviews)</p>
-          </div>
           {/* Price */}
           <p className="mt-4 text-4xl font-bold text-violet-900">
             ${product.mrp - product.discount}{" "}
