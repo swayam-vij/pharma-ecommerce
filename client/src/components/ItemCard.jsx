@@ -7,7 +7,7 @@ const ItemCard = (props) => {
   return (
     <div className="flex items-center justify-center w-80">
       <div className="w-full p-4">
-        <div className="flex flex-col justify-center p-10 bg-stone-200 rounded-lg shadow-2xl card">
+        <div className="flex flex-col justify-center p-10 bg-white hover:bg-blue-300 rounded-lg shadow-2xl card">
           <div>
             <Link to={`/products/${props.id}`}>
               <img
@@ -18,17 +18,17 @@ const ItemCard = (props) => {
             </Link>
           </div>
           <div>
-            <p className="text-xl font-semibold text-gray-900 uppercase">
+            <p className="text-xl font-semibold text-gray-900 uppercase overflow-hidden overflow-ellipsis whitespace-nowrap max-w-full">
               {props.name}
             </p>
           </div>
-          <div className="grid gap-10 prod-info">
+          <div className="grid gap-5 prod-info">
             {/* Price section */}
             <div className="flex items-center text-gray-900 md:flex-row">
               {/* New price */}
               {props.discount && (
                 <div className="text-lg font-semibold">
-                  <p>{props.discount}</p>
+                  <p>Rs. {props.discount}</p>
                 </div>
               )}
               {/* Old price */}
@@ -43,7 +43,7 @@ const ItemCard = (props) => {
                 onClick={() => {
                   addToCart(props.id);
                 }}
-                className="px-6 py-2 uppercase transition duration-200 ease-in border-2 border-gray-900 rounded-full hover:bg-blue-600 hover:text-white focus:outline-none"
+                className="px-6 py-2 uppercase transition duration-200 ease-in rounded-full hover:bg-black hover:text-white outline"
               >
                 Add to cart
               </button>

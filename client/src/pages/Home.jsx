@@ -10,11 +10,11 @@ import FAQ from "../components/FAQ";
 const Home = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <Info />
       <AllProducts />
-      <FAQ />
+      {/* <FAQ /> */}
       <CardSection />
       <Footer />
     </div>

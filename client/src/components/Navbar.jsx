@@ -25,7 +25,7 @@ const Navbar = () => {
       <Link to="/">
         <div className="flex justify-center items-center gap-2">
           <img src="https://dummyimage.com/125x70/000/fff" alt="" />
-          <p className="text-2xl font-semibold">pahrma</p>
+          <p className="text-2xl font-semibold">pharma</p>
         </div>
       </Link>
       {/* nav list */}

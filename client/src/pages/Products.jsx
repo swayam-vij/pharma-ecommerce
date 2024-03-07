@@ -9,7 +9,7 @@ const Products = (props) => {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-wrap justify-center min-h-screen">
+      <div className="flex flex-wrap justify-center min-h-screen bg-black">
         {allProducts.map((item, i) =>
           props.category === item.category ? (
             <ItemCard
