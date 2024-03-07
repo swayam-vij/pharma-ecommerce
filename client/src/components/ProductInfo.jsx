@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "react-rater/lib/react-rater.css";
 import { FaShoppingCart } from "react-icons/fa";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
