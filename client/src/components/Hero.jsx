@@ -41,7 +41,7 @@ const Hero = () => {
     // </div>
 
     <div
-      className="bg-cover bg-center min-h-screen relative"
+      className="bg-cover bg-center min-h-screen z-0"
       style={{ backgroundImage: `url(${hero})` }}
     >
       <div className="flex flex-col  h-screen justify-center mx-10">

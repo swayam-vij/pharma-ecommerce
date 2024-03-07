@@ -7,11 +7,13 @@ import Cart from "./pages/Cart";
 import LoginSignup from "./pages/LoginSignUp";
 import Footer from "./components/Footer";
 import ProductInfo from "./components/ProductInfo";
+import HamburgerMenu from "./components/HamburgerMenu";
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
+        <HamburgerMenu />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/vitamins" element={<Products category="vitamin" />} />

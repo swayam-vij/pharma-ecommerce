@@ -6,3 +6,5 @@
 - [ ] make site responsive
 - [ ] add stripe
 - [ ] optimize checkout page
+- [ ] add faq accordian
+- [ ] hamburger menu
