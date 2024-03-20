@@ -41,21 +41,27 @@ const Hero = () => {
     // </div>
 
     <div
-      className="bg-cover bg-center min-h-screen z-0"
+      className="bg-cover bg-center min-h-screen "
       style={{ backgroundImage: `url(${hero})` }}
     >
       <div className="flex flex-col  h-screen justify-center mx-10">
         <div className="flex flex-col  ">
-          <div className="text-6xl font-semibold font-MW">KRIPT PHARMA</div>
-          <div className="text-2xl py-10">
+          <div className="text-6xl font-bold font-MW">
+            KRIPT <br /> PHARMACEUTICALS
+          </div>
+          <div className="text-2xl py-5">
             Empowering Health and Wellness:
             <br />
             Your Premium Destination for Pharma Solutions
           </div>
-
-          <button className="bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded-3xl w-36 outline">
-            View Products
-          </button>
+          <div className="flex flex-row gap-5">
+            <button className="bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded-3xl w-36 outline">
+              View Products
+            </button>
+            <button className="bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded-3xl w-36 outline">
+              Contact Us!
+            </button>
+          </div>
         </div>
       </div>
     </div>

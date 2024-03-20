@@ -99,7 +99,7 @@ const CartItem = () => {
               <div className="flex justify-end">
                 <a
                   href="#"
-                  className="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600"
+                  className="rounded-2xl px-3 py-2 transition hover:bg-black hover:text-white outline"
                 >
                   Checkout
                 </a>

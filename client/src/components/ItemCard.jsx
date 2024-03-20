@@ -7,18 +7,18 @@ const ItemCard = (props) => {
   return (
     <div className="flex items-center justify-center w-80">
       <div className="w-full p-4">
-        <div className="flex flex-col justify-center p-10 bg-white hover:bg-blue-300 rounded-lg shadow-2xl card">
+        <div className="flex flex-col justify-center p-4 bg-white hover:bg-blue-300 rounded-lg shadow-2xl card">
           <div>
             <Link to={`/products/${props.id}`}>
               <img
                 onClick={window.scrollTo(0, 0)}
                 src={props.thumbnail}
-                className="object-cover object-center w-full py-5"
+                className="object-cover object-center w-full rounded"
               />
             </Link>
           </div>
           <div>
-            <p className="text-xl font-semibold text-gray-900 uppercase overflow-hidden overflow-ellipsis whitespace-nowrap max-w-full">
+            <p className="text-xl font-semibold text-gray-900 uppercase overflow-hidden overflow-ellipsis whitespace-nowrap max-w-full pt-3">
               {props.name}
             </p>
           </div>

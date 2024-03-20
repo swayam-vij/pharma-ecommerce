@@ -6,15 +6,18 @@ import AllProducts from "./AllProducts";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FAQ from "../components/FAQ";
+import ContactUs from "../components/ContactUs";
+import AboutUs from "../components/AboutUs";
 
 const Home = () => {
   return (
     <div>
-      {/* <Navbar /> */}
       <Hero />
       <Info />
+      <FAQ />
       <AllProducts />
-      {/* <FAQ /> */}
+      <AboutUs />
+      <ContactUs />
       <CardSection />
       <Footer />
     </div>

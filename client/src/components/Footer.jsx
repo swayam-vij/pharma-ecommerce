@@ -14,16 +14,16 @@ const Footer = () => {
                 </h2>
                 <ul>
                   <li className="mb-4">
-                    <a href="#">1</a>
+                    <a href="#">All Products</a>
                   </li>
                   <li className="mb-4">
-                    <a href="#">2</a>
+                    <a href="#">Contact Us</a>
                   </li>
                   <li className="mb-4">
-                    <a href="#">3</a>
+                    <a href="#">About Us</a>
                   </li>
                   <li className="mb-4">
-                    <a href="#">4</a>
+                    <a href="#">Terms & Conditions</a>
                   </li>
                 </ul>
               </div>
@@ -35,10 +35,10 @@ const Footer = () => {
                 </h2>
                 <ul>
                   <li className="mb-4">
-                    <a href="#">num 1</a>
+                    <a href="#">+91 99965 62531</a>
                   </li>
                   <li className="mb-4">
-                    <a href="#">num 2</a>
+                    <a href="#">+91 85719 13753</a>
                   </li>
                 </ul>
               </div>

@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <HamburgerMenu />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/vitamins" element={<Products category="vitamin" />} />
