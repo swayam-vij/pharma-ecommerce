@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaShoppingCart } from "react-icons/fa";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import RelatedProduct from "./RelatedProduct";
@@ -34,13 +33,17 @@ const ProductInfo = () => {
   return (
     <div>
       <Navbar />
-      <section className="container mx-auto px-4 py-5 lg:grid lg:grid-cols-2 lg:py-10">
+      <section className="container mx-auto px-4 my-24 lg:grid lg:grid-cols-2 lg:py-10">
         {/* Image gallery */}
         <div>
           <Slider {...sliderSettings}>
             {Object.values(product.carousel).map((img, index) => (
               <div key={index}>
-                <img src={img} alt={`Slide ${index + 1}`} />
+                <img
+                  src={img}
+                  alt={`Slide ${index + 1}`}
+                  style={{ width: "500px", height: "auto" }}
+                />
               </div>
             ))}
           </Slider>
@@ -49,7 +52,7 @@ const ProductInfo = () => {
         <div className="mx-auto px-5 lg:px-10">
           <h2 className="pt-3 text-2xl font-bold lg:pt-0">{product.name}</h2>
           {/* Price */}
-          <p className="mt-4 text-4xl font-bold text-violet-900">
+          <p className="mt-4 text-4xl font-bold">
             ${product.mrp - product.discount}{" "}
             {product.discount > 0 && (
               <span className="text-xs text-gray-400 line-through">
@@ -58,20 +61,19 @@ const ProductInfo = () => {
             )}
           </p>
           {/* Description */}
-          <p className="pt-5 text-sm leading-5 text-gray-500">
+          <p className="pt-5 text-sm leading-5 text-gray-800">
             {/* Add product description here */}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           {/* Add to Cart button */}
-          <div className="mt-6 flex items-center gap-6">
+          <div className="mt-6 flex items-center">
             <button
               onClick={() => {
                 addToCart(product.id);
               }}
-              className="flex h-12 w-1/3 items-center justify-center bg-violet-900 text-white duration-100 hover:bg-blue-800"
+              className="flex mr-4 px-6 py-2 uppercase rounded-full bg-white hover:bg-black hover:text-white outline"
             >
-              <FaShoppingCart />
               Add to Cart
             </button>
           </div>

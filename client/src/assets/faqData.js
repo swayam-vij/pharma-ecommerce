@@ -1,4 +1,4 @@
-let faqData = [
+let accordionData = [
   {
     id: 1,
     question: "Lorem ipsum dolor sit amet, consectetur ?",
@@ -25,4 +25,4 @@ let faqData = [
   },
 ];
 
-export default faqData;
+export default accordionData;
