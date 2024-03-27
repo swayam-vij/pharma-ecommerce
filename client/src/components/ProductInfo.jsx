@@ -26,6 +26,7 @@ const ProductInfo = () => {
     swipeToSlide: true,
     touchMove: true,
   };
+
   if (!product) {
     return <div>Product not found</div>;
   }
@@ -33,50 +34,76 @@ const ProductInfo = () => {
   return (
     <div>
       <Navbar />
-      <section className="container mx-auto px-4 my-24 lg:grid lg:grid-cols-2 lg:py-10">
-        {/* Image gallery */}
-        <div>
-          <Slider {...sliderSettings}>
-            {Object.values(product.carousel).map((img, index) => (
-              <div key={index}>
-                <img
-                  src={img}
-                  alt={`Slide ${index + 1}`}
-                  style={{ width: "500px", height: "auto" }}
-                />
-              </div>
-            ))}
-          </Slider>
-        </div>
-        {/* Description */}
-        <div className="mx-auto px-5 lg:px-10">
-          <h2 className="pt-3 text-2xl font-bold lg:pt-0">{product.name}</h2>
-          {/* Price */}
-          <p className="mt-4 text-4xl font-bold">
-            ${product.mrp - product.discount}{" "}
-            {product.discount > 0 && (
-              <span className="text-xs text-gray-400 line-through">
-                ${product.mrp}
-              </span>
-            )}
-          </p>
-          {/* Description */}
-          <p className="pt-5 text-sm leading-5 text-gray-800">
-            {/* Add product description here */}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          {/* Add to Cart button */}
-          <div className="mt-6 flex items-center">
-            <button
-              onClick={() => {
-                addToCart(product.id);
-              }}
-              className="flex mr-4 px-6 py-2 uppercase rounded-full bg-white hover:bg-black hover:text-white outline"
-            >
-              Add to Cart
-            </button>
+      <section className="container mx-auto px-4 my-24">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-10">
+          {/* Image gallery */}
+          <div>
+            <Slider {...sliderSettings}>
+              {Object.values(product.carousel).map((img, index) => (
+                <div key={index}>
+                  <img
+                    src={img}
+                    alt={`Slide ${index + 1}`}
+                    className="w-full rounded-lg"
+                  />
+                </div>
+              ))}
+            </Slider>
           </div>
+          {/* Description */}
+          <div className="lg:px-5">
+            <h2 className="pt-3 text-2xl font-bold">{product.name}</h2>
+            <p className="mt-4 text-4xl font-bold">
+              ${product.mrp - product.discount}{" "}
+              {product.discount > 0 && (
+                <span className="text-xs text-gray-400 line-through">
+                  ${product.mrp}
+                </span>
+              )}
+            </p>
+            <p className="pt-5 text-lg leading-8 text-gray-800">
+              {product.discription}
+            </p>
+            <div className="mt-6 flex items-center">
+              <button
+                onClick={() => {
+                  addToCart(product.id);
+                }}
+                className="flex mr-4 px-6 py-2 uppercase rounded-full bg-white hover:bg-black hover:text-white outline"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Additional Information */}
+      <section className="container mx-auto px-4 my-24">
+        <div className="lg:px-5">
+          <h3 className="text-xl font-bold text-gray-800">Use Case:</h3>
+          <p className="pt-2 text-lg leading-8 text-gray-800">
+            {product.useCase}
+          </p>
+          <h3 className="pt-5 text-xl font-bold text-gray-800">
+            Side Effects:
+          </h3>
+          <p className="pt-2 text-lg leading-8 text-gray-800">
+            {product.sideEffect}
+          </p>
+          <h3 className="pt-5 text-xl font-bold text-gray-800">How to Use:</h3>
+          <p className="pt-2 text-lg leading-8 text-gray-800">
+            {product.howToUse}
+          </p>
+          <h3 className="pt-5 text-xl font-bold text-gray-800">
+            Salt Composition:
+          </h3>
+          <p className="pt-2 text-lg leading-8 text-gray-800">
+            {product.saltComposition}
+          </p>
+          <h3 className="pt-5 text-xl font-bold text-gray-800">Storage:</h3>
+          <p className="pt-2 text-lg leading-8 text-gray-800">
+            {product.storage}
+          </p>
         </div>
       </section>
       <RelatedProduct />

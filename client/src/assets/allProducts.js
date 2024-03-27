@@ -32,7 +32,7 @@ import multiript_4 from "./multiript_4.jpg";
 let allProducts = [
   {
     id: 1,
-    name: "Calcium tablets",
+    name: "Calript tablets",
     category: "calcium",
     mrp: 1000,
     discount: 500,
@@ -43,6 +43,17 @@ let allProducts = [
       img3: calript_ccm_3,
       img4: calript_ccm_4,
     },
+    discription:
+      "Calript® CCM Tablet is a combination of three nutritional supplements. It is used in the treatment of calcium and vitamin D deficiency. It is important for maintaining strong bones and helps prevent bone disorders. Take Calript® CCM Tablet in the dose and duration as prescribed by your doctor. Take it regularly and as long as the doctor has prescribed to get the maximum benefits. This medicine may be only part of a complete program of treatment that also includes making changes to your diet and taking calcium and vitamin supplements. Learn about the foods you should eat to make sure you get enough calcium and vitamin D in your diet.",
+    useCase:
+      "Vitamin D present in Calript® CCM Tablet helps in the absorption of calcium. It also regulates the amount of calcium and phosphate in your body. This helps to keep your bones, teeth and muscles healthy. Additionally it can boost your immunity and increase the body’s resistance against various infections. ",
+    sideEffect:
+      "Calript® CCM Tablet is generally well tolerated with little or no side effects when used in the recommended dose. Most side effects do not require any medical attention and disappear as your body adjusts to the medicine. However, if you experience any symptoms on taking this medicine, you should let your doctor know.",
+    howToUse:
+      "Take this medicine in the dose and duration as advised by your doctor. Swallow it as a whole. Do not chew, crush or break it. Calript® CCM Tablet may be taken with or without food, but it is better to take it at a fixed time.",
+    saltComposition:
+      "Calcium Citrate Malate (250mg) + Vitamin D3 (100mg) + Folic Acid (50mcg)",
+    storage: "Store below 30°C",
   },
   {
     id: 2,
@@ -57,6 +68,12 @@ let allProducts = [
       img3: krimax_vanilla_3,
       img4: krimax_vanilla_4,
     },
+    discription: "",
+    useCase: "",
+    sideEffect: "",
+    howToUse: "",
+    saltComposition: "",
+    storage: "",
   },
   {
     id: 3,
@@ -70,6 +87,12 @@ let allProducts = [
       img2: krimax_choco_2,
       img3: krimax_choco_3,
     },
+    discription: "",
+    useCase: "",
+    sideEffect: "",
+    howToUse: "",
+    saltComposition: "",
+    storage: "",
   },
   {
     id: 4,
@@ -84,6 +107,12 @@ let allProducts = [
       img3: calzoript_sachet_3,
       img4: calzoript_sachet_4,
     },
+    discription: "",
+    useCase: "",
+    sideEffect: "",
+    howToUse: "",
+    saltComposition: "",
+    storage: "",
   },
   {
     id: 5,
@@ -98,6 +127,12 @@ let allProducts = [
       img3: calzoript_shot_3,
       img4: calzoript_shot_4,
     },
+    discription: "",
+    useCase: "",
+    sideEffect: "",
+    howToUse: "",
+    saltComposition: "",
+    storage: "",
   },
   {
     id: 6,
@@ -111,6 +146,12 @@ let allProducts = [
       img2: calzoript_cap_2,
       img3: calzoript_cap_3,
     },
+    discription: "",
+    useCase: "",
+    sideEffect: "",
+    howToUse: "",
+    saltComposition: "",
+    storage: "",
   },
   {
     id: 7,
@@ -125,6 +166,12 @@ let allProducts = [
       img3: onziript_3,
       img4: onziript_4,
     },
+    discription: "",
+    useCase: "",
+    sideEffect: "",
+    howToUse: "",
+    saltComposition: "",
+    storage: "",
   },
   {
     id: 8,
@@ -139,6 +186,12 @@ let allProducts = [
       img3: multiript_3,
       img4: multiript_4,
     },
+    discription: "",
+    useCase: "",
+    sideEffect: "",
+    howToUse: "",
+    saltComposition: "",
+    storage: "",
   },
 ];
 

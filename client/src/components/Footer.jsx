@@ -91,7 +91,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/kriptpharmaceuticals/">
               <FaInstagram size={30} />
             </a>
-            <a href="#">
+            <a href="kriptpharma.netlify.com">
               <GrCatalog size={30} />
             </a>
             <a href="https://www.youtube.com/@rabelexe8541">
