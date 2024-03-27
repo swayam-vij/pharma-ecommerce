@@ -7,27 +7,15 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ContactUs from "../components/ContactUs";
 import AboutUs from "../components/AboutUs";
-import Accordion from "../components/Accordion";
-import accordionData from "../assets/faqData";
 
 const Home = () => {
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    // Fetch data from JSON file
-    fetch("/accordionData.json")
-      .then((response) => response.json())
-      .then((data) => setItems(data))
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
   return (
     <div>
       <Navbar />
       <Hero />
-      <Accordion />
-      <AllProducts />
       <Info />
-      <AboutUs items={items} />
+      <AllProducts />
+      <AboutUs />
       <ContactUs />
       <CardSection />
       <Footer />

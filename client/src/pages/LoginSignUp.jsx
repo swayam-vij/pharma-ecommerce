@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AuthForm from "../components/AuthForm";
+import Navbar from "../components/Navbar";
 
 const LoginSignUp = () => {
   const [mode, setMode] = useState("login");
@@ -11,20 +12,23 @@ const LoginSignUp = () => {
 
   return (
     <div className={`form-block-wrapper form-block-wrapper--is-${mode}`}>
-      <section
-        className={`form-block form-block--is-${mode} mx-auto mt-16 w-72 bg-opacity-25 bg-white p-6 rounded-lg shadow-md`}
-      >
-        <header className="form-block__header mb-6">
-          <h1 className="text-2xl font-semibold">
-            {mode === "login" ? "Welcome back!" : "Create a new Account."}
-          </h1>
-        </header>
-        <AuthForm
-          mode={mode}
-          onSubmit={() => console.log("submit")}
-          toggleMode={toggleMode}
-        />
-      </section>
+      <Navbar />
+      <div className="">
+        <section
+          className={`form-block form-block--is-${mode} mx-auto w-72 bg-opacity-25 bg-white p-6 rounded-lg shadow-md`}
+        >
+          <header className="form-block__header mb-6">
+            <h1 className="text-2xl font-semibold">
+              {mode === "login" ? "Welcome back!" : "Create a new Account."}
+            </h1>
+          </header>
+          <AuthForm
+            mode={mode}
+            onSubmit={() => console.log("submit")}
+            toggleMode={toggleMode}
+          />
+        </section>
+      </div>
     </div>
   );
 };
