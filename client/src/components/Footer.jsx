@@ -3,6 +3,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 import { GrCatalog } from "react-icons/gr";
 import { FaYoutube } from "react-icons/fa";
+import { Link as ScrollLink } from "react-scroll";
 const Footer = () => {
   return (
     <div>
@@ -15,15 +16,36 @@ const Footer = () => {
                   Components
                 </h2>
                 <ul>
-                  <li className="mb-4">
-                    <a href="#">All Products</a>
-                  </li>
-                  <li className="mb-4">
-                    <a href="#">Contact Us</a>
-                  </li>
-                  <li className="mb-4">
-                    <a href="#">About Us</a>
-                  </li>
+                  <ScrollLink
+                    to="allProducts" // Target the AllProducts component
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                  >
+                    <li className="mb-4">
+                      <a href="#">All Products</a>
+                    </li>
+                  </ScrollLink>
+                  <ScrollLink
+                    to="contactUs" // Target the AllProducts component
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                  >
+                    <li className="mb-4">
+                      <a href="#">Contact Us</a>
+                    </li>
+                  </ScrollLink>
+                  <ScrollLink
+                    to="aboutUs" // Target the AllProducts component
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                  >
+                    <li className="mb-4">
+                      <a href="#">About Us</a>
+                    </li>
+                  </ScrollLink>
                   <li className="mb-4">
                     <a href="#">Terms & Conditions</a>
                   </li>

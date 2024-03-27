@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as ScrollLink } from "react-scroll";
 import hero from "../assets/hero-banner.jpg";
 
 const Hero = () => {
@@ -20,12 +21,26 @@ const Hero = () => {
               Your Premium Destination for Pharma Solutions
             </div>
             <div className="flex flex-row gap-5">
-              <button className="bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded-3xl w-36 outline">
-                View Products
-              </button>
-              <button className="bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded-3xl w-36 outline">
-                Contact Us!
-              </button>
+              <ScrollLink
+                to="allProducts" // Target the AllProducts component
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <button className="bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded-3xl w-36 outline">
+                  View Products
+                </button>
+              </ScrollLink>
+              <ScrollLink
+                to="contactUs" // Target the ContactUs component
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <button className="bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded-3xl w-36 outline">
+                  Contact Us!
+                </button>
+              </ScrollLink>
             </div>
           </div>
         </div>
@@ -46,12 +61,21 @@ const Hero = () => {
             Your Premium Destination for Pharma Solutions
           </div>
           <div className="flex flex-row gap-5 mt-10 justify-center lg:justify-start items-center">
-            <button className="bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded-3xl w-36 outline lg:static lg:w-1/2">
-              View Products
-            </button>
-            <button className="bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded-3xl w-36 outline lg:static lg:w-1/2">
-              Contact Us!
-            </button>
+            <ScrollLink
+              to="allProducts"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              <button className="bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded-3xl w-36 outline lg:static lg:w-1/2">
+                View Products
+              </button>
+            </ScrollLink>
+            <ScrollLink to="contactUs" spy={true} smooth={true} duration={500}>
+              <button className="bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded-3xl w-36 outline lg:static lg:w-1/2">
+                Contact Us!
+              </button>
+            </ScrollLink>
           </div>
         </div>
       </div>
