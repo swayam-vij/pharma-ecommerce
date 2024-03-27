@@ -73,12 +73,17 @@ const Footer = () => {
                   Location
                 </h2>
                 <p>
-                  <a href="/" className="items-center flex justify-center">
+                  <a
+                    href="https://www.google.co.in/maps/search/Sector-27%2FA,+Plot+No.+419,+Pradhikaran,+Nigdi,+Pune,+Maharashtra,+411044/@18.6511235,73.7686516,16z/data=!3m1!4b1?shorturl=1"
+                    className="items-center flex justify-center"
+                  >
                     <CiLocationOn size={30} />
                   </a>
-                  House number 1547 sector 7 UE kurukshetra
+                  Plot no. 419, Sector 27/A
+                  <br />
+                  Nigidi, Pune, Maharashtra
                 </p>
-                <p>Pincode - 136118</p>
+                <p>Pincode - 411044</p>
               </div>
             </li>
           </ul>
