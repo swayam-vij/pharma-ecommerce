@@ -4,16 +4,25 @@ import { ShopContext } from "../context/shopContext";
 
 const ItemCard = (props) => {
   const { addToCart } = useContext(ShopContext);
+
+  const handleImageClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="flex items-center justify-center w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
       <div className="w-full p-4">
-        <div className="flex flex-col justify-center p-4 bg-white hover:bg-blue-300 rounded-lg shadow-2xl card">
+        <div
+          className="flex flex-col justify-center p-4 bg-white hover:bg-blue-300 rounded-lg shadow-2xl card"
+          style={{ width: "250px", height: "350px" }}
+        >
           <div>
             <Link to={`/products/${props.id}`}>
               <img
-                onClick={window.scrollTo(0, 0)}
                 src={props.thumbnail}
-                className="object-cover object-center w-full rounded"
+                className="object-cover object-center w-full h-full rounded-xl cursor-pointer p-2"
+                alt={props.name}
+                onClick={handleImageClick}
               />
             </Link>
           </div>
@@ -43,7 +52,7 @@ const ItemCard = (props) => {
                 onClick={() => {
                   addToCart(props.id);
                 }}
-                className="px-6 py-2 uppercase transition duration-200 ease-in rounded-full hover:bg-black hover:text-white outline"
+                className="px-6 py-2 uppercase transition duration-200 ease-in rounded-full hover:bg-black hover:text-white outline mb-2"
               >
                 Add to cart
               </button>
