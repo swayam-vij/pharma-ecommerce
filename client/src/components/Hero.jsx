@@ -53,7 +53,7 @@ const Hero = () => {
       >
         <div className="text-center w-full lg:w-1/2 lg:inline-block mt-10 px-6 lg:px-12">
           <div className="text-3xl lg:text-6xl font-bold font-MW">
-            KRIPT <br /> PHARMACEUTICALS
+            <span className="text-left">KRIPT</span> <br /> PHARMACEUTICALS
           </div>
           <div className="text-xl leading-relaxed pt-5 lg:pt-10">
             Empowering Health and Wellness:
