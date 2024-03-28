@@ -11,7 +11,7 @@ const AllProducts = (props) => {
       className="min-h-screen flex flex-col items-center justify-center pt-32"
     >
       <h2 className="text-3xl font-bold mb-4">All Products</h2>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center lg:justify-start">
         {allProducts.map((item, i) => (
           <ItemCard
             key={i}

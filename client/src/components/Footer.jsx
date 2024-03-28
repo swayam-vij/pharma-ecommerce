@@ -3,6 +3,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 import { GrCatalog } from "react-icons/gr";
 import { FaYoutube } from "react-icons/fa";
+import { BsBrowserChrome } from "react-icons/bs";
 import { Link as ScrollLink } from "react-scroll";
 const Footer = () => {
   return (
@@ -97,9 +98,12 @@ const Footer = () => {
             <a href="https://www.youtube.com/@rabelexe8541">
               <FaYoutube size={30} />
             </a>
+            <a href="https://www.kriptpharma.com/">
+              <BsBrowserChrome size={30} />
+            </a>
           </div>
           <div className="text-center pt-10 sm:pt-12 font-light flex items-center justify-center">
-            © Kript Pharmaceuticals
+            © Kript Pharmaceutical
           </div>
         </div>
       </footer>
