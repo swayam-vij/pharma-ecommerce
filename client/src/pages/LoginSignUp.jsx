@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import AuthForm from "../components/AuthForm";
 import Navbar from "../components/Navbar";
 
@@ -10,10 +11,31 @@ const LoginSignUp = () => {
     setMode(newMode);
   };
 
+  const handleSubmit = async (formData) => {
+    try {
+      let response;
+      if (mode === "login") {
+        response = await axios.post("http://localhost:3000/login", formData);
+      } else {
+        response = await axios.post("http://localhost:3000/signup", formData);
+      }
+      // Handle successful login/signup
+      const { success, token } = response.data;
+      if (success && token) {
+        // Save token to localStorage
+        localStorage.setItem("authToken", token);
+        // Redirect to home page
+        window.location.href = "/";
+      }
+    } catch (error) {
+      console.error("Authentication error:", error.response.data);
+    }
+  };
+
   return (
     <div className={`form-block-wrapper form-block-wrapper--is-${mode}`}>
       <Navbar />
-      <div className="">
+      <div className=" py-32">
         <section
           className={`form-block form-block--is-${mode} mx-auto w-72 bg-opacity-25 bg-white p-6 rounded-lg shadow-md`}
         >
@@ -24,7 +46,7 @@ const LoginSignUp = () => {
           </header>
           <AuthForm
             mode={mode}
-            onSubmit={() => console.log("submit")}
+            onSubmit={handleSubmit}
             toggleMode={toggleMode}
           />
         </section>

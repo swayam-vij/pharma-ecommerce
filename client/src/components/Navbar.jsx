@@ -2,12 +2,18 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { ShopContext } from "../context/shopContext";
-import { Home } from "lucide-react";
-import { AlignLeft } from "lucide-react";
+import { Home, AlignLeft, User } from "lucide-react";
 
 const Navbar = () => {
   const { getTotalCartItems } = useContext(ShopContext);
   const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleLogout = () => {
+    // Remove auth token from localStorage
+    localStorage.removeItem("authToken");
+    // Redirect to home page
+    window.location.href = "/";
+  };
 
   return (
     <nav className="text-xl p-6 absolute top-0 left-0 w-full z-50">
@@ -33,12 +39,24 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex items-center">
-          <Link
-            to="/login"
-            className="mr-4 px-6 py-2 uppercase rounded-full bg-white hover:bg-black hover:text-white outline"
-          >
-            LOGIN
-          </Link>
+          {localStorage.getItem("authToken") ? (
+            <>
+              <User size={30} className="mr-4" />
+              <button
+                className="mr-4 px-6 py-2 uppercase rounded-full bg-white hover:bg-black hover:text-white outline"
+                onClick={handleLogout}
+              >
+                LOGOUT
+              </button>
+            </>
+          ) : (
+            <Link
+              to="/login"
+              className="mr-4 px-6 py-2 uppercase rounded-full bg-white hover:bg-black hover:text-white outline"
+            >
+              LOGIN
+            </Link>
+          )}
           <Link to="/cart" className="mr-4 flex">
             <FaShoppingCart size={24} />
             <span className="ml-2">{getTotalCartItems()}</span>
@@ -73,9 +91,25 @@ const Navbar = () => {
             <Link to="/omega" className="block px-4 py-2 text-white">
               Omega 3
             </Link>
-            <Link to="/login" className="block px-4 py-2 text-white">
-              LOGIN
-            </Link>
+            {localStorage.getItem("authToken") ? (
+              <>
+                <Link to="/" className="block px-4 py-2 text-white">
+                  <span className="flex space-x-5">
+                    <User /> User
+                  </span>
+                </Link>
+                <button
+                  className="block px-4 py-2 text-white"
+                  onClick={handleLogout}
+                >
+                  <span className="flex space-x-5">Logout</span>
+                </button>
+              </>
+            ) : (
+              <Link to="/login" className="block px-4 py-2 text-white">
+                LOGIN
+              </Link>
+            )}
             <Link to="/cart" className="block px-4 py-2 text-white">
               <span className="flex space-x-5">
                 <FaShoppingCart size={24} color="white" />

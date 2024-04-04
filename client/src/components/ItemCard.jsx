@@ -10,7 +10,7 @@ const ItemCard = (props) => {
   };
 
   return (
-    <div className="w-full p-4 flex">
+    <div className="w-80 p-4 flex">
       <div className="bg-white rounded-lg shadow-md overflow-hidden w-full">
         <Link to={`/products/${props.id}`}>
           <img
