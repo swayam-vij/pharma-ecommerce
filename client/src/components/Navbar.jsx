@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { ShopContext } from "../context/shopContext";
 import { Home, AlignLeft, User } from "lucide-react";
+import { useAuth0 } from "@auth0/auth0-react";
+import logo from "../assets/kript-pharma-logo.png"
 
 const Navbar = () => {
+  const { user, loginWithRedirect, logout, isAuthenticated } = useAuth0()
   const { getTotalCartItems } = useContext(ShopContext);
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -21,7 +24,10 @@ const Navbar = () => {
       <div className="flex justify-between items-center hidden lg:flex">
         <div className="mr-4">
           <Link to="/" className="flex items-center">
-            <Home size={24} className="mr-2" />
+            <img 
+              src={logo} 
+              alt="Kript Pharma"
+              className="w-30 h-20" />
           </Link>
         </div>
         <div>
@@ -39,7 +45,24 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex items-center">
-          {localStorage.getItem("authToken") ? (
+
+          {isAuthenticated ? (
+            <button 
+              onClick={() => logout()}
+              className="mr-4 px-6 py-2 uppercase rounded-full bg-white hover:bg-black hover:text-white outline"
+            >
+              Log Out
+            </button>
+          ) : (
+            <button 
+              onClick={() => loginWithRedirect()}
+              className="mr-4 px-6 py-2 uppercase rounded-full bg-white hover:bg-black hover:text-white outline"
+            >
+              Log In
+            </button>
+          )}
+
+          {/* {localStorage.getItem("authToken") ? (
             <>
               <User size={30} className="mr-4" />
               <button
@@ -56,7 +79,7 @@ const Navbar = () => {
             >
               LOGIN
             </Link>
-          )}
+          )} */}
           <Link to="/cart" className="mr-4 flex">
             <FaShoppingCart size={24} />
             <span className="ml-2">{getTotalCartItems()}</span>
@@ -91,24 +114,20 @@ const Navbar = () => {
             <Link to="/omega" className="block px-4 py-2 text-white">
               Omega 3
             </Link>
-            {localStorage.getItem("authToken") ? (
-              <>
-                <Link to="/" className="block px-4 py-2 text-white">
-                  <span className="flex space-x-5">
-                    <User /> User
-                  </span>
-                </Link>
+            {isAuthenticated ? (
                 <button
                   className="block px-4 py-2 text-white"
-                  onClick={handleLogout}
+                  onClick={() => logout()}
                 >
-                  <span className="flex space-x-5">Logout</span>
+                  Logout
                 </button>
-              </>
             ) : (
-              <Link to="/login" className="block px-4 py-2 text-white">
+              <button 
+              className="block px-4 py-2 text-white"
+              onClick={() => loginWithRedirect()}
+              >
                 LOGIN
-              </Link>
+              </button>
             )}
             <Link to="/cart" className="block px-4 py-2 text-white">
               <span className="flex space-x-5">

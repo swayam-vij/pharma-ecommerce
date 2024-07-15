@@ -1,5 +1,5 @@
 import React from "react";
-
+import logo from "../assets/kript-pharma-logo.png"
 const AboutUs = () => {
   return (
     <div id="aboutUs" className="py-16">
@@ -7,7 +7,7 @@ const AboutUs = () => {
         <div className="text-center">
           {/* Image */}
           <img
-            src="https://www.kriptpharma.com/wp-content/uploads/2021/10/kript-pharma-logo.png"
+            src={logo}
             alt="About Us"
             className="w-1/2 mx-auto mb-8"
           />

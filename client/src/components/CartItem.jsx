@@ -3,6 +3,7 @@ import { ShopContext } from "../context/shopContext";
 import { FaTrash } from "react-icons/fa";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const CartItem = () => {
   const { allProducts, cartItem, removeFromCart, getTotal } =
@@ -97,12 +98,12 @@ const CartItem = () => {
                 </div>
               </dl>
               <div className="flex justify-end">
-                <a
-                  href="#"
+                <Link
+                  to="/address"
                   className="rounded-2xl px-3 py-2 transition hover:bg-black hover:text-white outline"
                 >
                   Checkout
-                </a>
+                </Link>
               </div>
             </div>
           </div>

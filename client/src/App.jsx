@@ -8,6 +8,8 @@ import LoginSignup from "./pages/LoginSignUp";
 import Footer from "./components/Footer";
 import ProductInfo from "./components/ProductInfo";
 import HamburgerMenu from "./components/HamburgerMenu";
+import Address from "./components/Address";
+import OtpLogin from "./components/OtpLogin";
 
 const App = () => {
   return (
@@ -23,7 +25,9 @@ const App = () => {
           <Route path="/products" element={<ProductInfo />} />
           <Route path="/products/:productID" element={<ProductInfo />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<LoginSignup />} />
+          <Route path="/address" element={<Address />} />
+          {/* <Route path="/login" element={<LoginSignup />} /> */}
+          <Route path="/otpLogin" element={ <OtpLogin />} />
         </Routes>
       </BrowserRouter>
     </div>
